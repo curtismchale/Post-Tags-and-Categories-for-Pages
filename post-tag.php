@@ -14,6 +14,8 @@ License: GPLv2 or later
 /*
  *  todo give user the option to add categories and tags - on by default
  *  todo give user option to display tags and categories on archive pages - on by default
+ *  todo README.txt file
+ *  todo add plugin URI
 */
 
     // Make the metabox appear on the page editing screen
