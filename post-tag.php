@@ -11,6 +11,11 @@ License: GPLv2 or later
 ?>
 <?php
 
+/*
+ *  todo give user the option to add categories and tags - on by default
+ *  todo give user option to display tags and categories on archive pages - on by default
+*/
+
     // Make the metabox appear on the page editing screen
     function ptcfp_taxonomies_for_pages() {
         register_taxonomy_for_object_type('post_tag', 'page');
@@ -19,10 +24,17 @@ License: GPLv2 or later
     add_action('init', 'ptcfp_taxonomies_for_pages');
 
     // When displaying a tag archive, also show pages
-    function tags_archives($wp_query) {
+    function ptcfp_tags_archives($wp_query) {
         if ( $wp_query->get('tag') )
             $wp_query->set('post_type', 'any');
     }
-    add_action('pre_get_posts', 'tags_archives');
+    add_action('pre_get_posts', 'ptcfp_tags_archives');
+
+    // When displaying a category archive, also show pages
+    function ptcfp_category_archives($wp_query) {
+        if ( $wp_query->get('category_name') )
+            $wp_query->set('post_type', 'any');
+    }
+    add_action('pre_get_posts', 'ptcfp_category_archives');
 
 ?>
