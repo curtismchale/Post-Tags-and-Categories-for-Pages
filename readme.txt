@@ -4,7 +4,7 @@ Contributors: Curtis McHale
 Plugin Name: Post Tags and Categories for Pages
 Plugin URI: http://wpthemetutorial.com/plugins/post-tags-and-categories-for-pages/
 Tags: wp, tags, categories, pages
-Author URI: http://curtismchale.ca/about/
+Author URI: http://wpthemetutotial.com/about/
 Author: WP Theme Tutorial
 Requires at least: 3.0
 Tested up to: 3.3
