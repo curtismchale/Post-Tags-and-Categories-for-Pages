@@ -1,22 +1,19 @@
 <?php
 /*
 Plugin Name: Post Tags and Categories for Pages
-Plugin URI: 
-Description: Simply adds the stock Categories and Post Tags to your Pages..
-Version: 0.1
-Author: Curtis McHale
-Author URI: http://curtismchale.ca
-License: GPLv2 or later
+Plugin URI: http://wpthemetutorial.com/plugins/post-tags-and-categories-for-pages/
+Description: Simply adds the stock Categories and Post Tags to your Pages.
+Version: 1.0
+Author: WP Theme Tutorial
+Author URI: http://wpthemetutotial.com/about/
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-?>
-<?php
 
-/*
+/**
  *  todo give user the option to add categories and tags - on by default
  *  todo give user option to display tags and categories on archive pages - on by default
- *  todo README.txt file
- *  todo add plugin URI
-*/
+ */
 
     // Make the metabox appear on the page editing screen
     function ptcfp_taxonomies_for_pages() {
