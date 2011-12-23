@@ -13,6 +13,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /**
  *  todo give user the option to add categories and tags - on by default
  *  todo give user option to display tags and categories on archive pages - on by default
+ *  TODO add categories to the end of pages
+ *  TODO add the tags to the end of pages
  */
 
     /**
