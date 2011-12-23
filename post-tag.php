@@ -15,12 +15,36 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *  todo give user option to display tags and categories on archive pages - on by default
  */
 
-    // Make the metabox appear on the page editing screen
+    /**
+     * Registers the taxonomy terms for the post type
+     *
+     * @since 1.0
+     *
+     * @uses register_taxonomy_for_object_type
+     */
     function ptcfp_taxonomies_for_pages() {
         register_taxonomy_for_object_type('post_tag', 'page');
         register_taxonomy_for_object_type('category', 'page');
     }
     add_action('init', 'ptcfp_taxonomies_for_pages');
+    /**
+     * Includes the tags in archive pages
+     *
+     * Modifies the query object to include pages
+     * as well as posts in the items to be returned
+     * on archive pages
+     *
+     * @since 1.0
+     */
+    /**
+     * Includes the categories in archive pages
+     *
+     * Modifies the query object to include pages
+     * as well as posts in the items to be returned
+     * on archive pages
+     *
+     * @since 1.0
+     */
 
     // When displaying a tag archive, also show pages
     function ptcfp_tags_archives($wp_query) {
