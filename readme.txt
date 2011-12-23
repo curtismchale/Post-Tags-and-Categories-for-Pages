@@ -1,20 +1,18 @@
 === Post Tags and Categories for Pages ===
 
 Contributors: Curtis McHale
-Plugin Name: Post Tags and Categories for Pages
-Plugin URI: http://wpthemetutorial.com/plugins/post-tags-and-categories-for-pages/
 Tags: wp, tags, categories, pages
-Author URI: http://wpthemetutotial.com/about/
-Author: WP Theme Tutorial
 Requires at least: 3.0
 Tested up to: 3.3
 Stable tag: 1.0
-Version: 1.0
+
+Adds the built in WordPress categories and tags to your pages.
 
 == Description ==
 
 Post Tags and Categories for Pages adds the stock WordPress categories
-for all of your pages. Pages will show up in the stock WordPress search.
+for all of your pages. Pages will show up in the stock WordPress archive
+queries.
 
 == Installation ==
 
@@ -25,6 +23,6 @@ folder.
 
 == Changelog ==
 
-1.0
+= 1.0 =
 
 - relesed on WordPress repository
