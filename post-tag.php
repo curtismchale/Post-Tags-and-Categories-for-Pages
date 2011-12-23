@@ -23,10 +23,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      * @uses register_taxonomy_for_object_type
      */
     function ptcfp_taxonomies_for_pages() {
-        register_taxonomy_for_object_type('post_tag', 'page');
-        register_taxonomy_for_object_type('category', 'page');
+        register_taxonomy_for_object_type( 'post_tag', 'page' );
+        register_taxonomy_for_object_type( 'category', 'page' );
     }
-    add_action('init', 'ptcfp_taxonomies_for_pages');
+    add_action( 'init', 'ptcfp_taxonomies_for_pages' );
+
     /**
      * Includes the tags in archive pages
      *
