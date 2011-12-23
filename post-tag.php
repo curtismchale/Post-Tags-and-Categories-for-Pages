@@ -66,17 +66,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
       /* I just leave this here if I need to debug stuff */
       //ptcfp_print_r( $wp_query );
 
-    // When displaying a tag archive, also show pages
-    function ptcfp_tags_archives($wp_query) {
-        if ( $wp_query->get('tag') )
-            $wp_query->set('post_type', 'any');
     }
-    add_action('pre_get_posts', 'ptcfp_tags_archives');
 
-    // When displaying a category archive, also show pages
-    function ptcfp_category_archives($wp_query) {
-        if ( $wp_query->get('category_name') )
-            $wp_query->set('post_type', 'any');
     /**
      * Want to make sure that these query modifications don't
      * show on the admin side or we're going to get pages and
