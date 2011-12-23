@@ -85,8 +85,10 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      *
      * @since 1.0
      */
+    if( !is_admin() ) {
+      add_action( 'pre_get_posts', 'ptcfp_category_archives' );
+      add_action( 'pre_get_posts', 'ptcfp_tags_archives' );
     }
-    add_action('pre_get_posts', 'ptcfp_category_archives');
 
     /**
      * Produces print_r inside <pre>
