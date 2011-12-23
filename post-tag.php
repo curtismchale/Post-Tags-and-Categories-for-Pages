@@ -73,4 +73,18 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     }
     add_action('pre_get_posts', 'ptcfp_category_archives');
 
+    /**
+     * Produces print_r inside <pre>
+     *
+     * @param string $data The variable we want to print
+     *
+     * @since 1.0
+     */
+    function ptcfp_print_r( $data ) {
+
+       echo "<pre>";
+          print_r($data);
+       echo "</pre>";
+
+    }
 ?>
