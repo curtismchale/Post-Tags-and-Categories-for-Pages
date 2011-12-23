@@ -39,6 +39,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      *
      * @since 1.0
      */
+    function ptcfp_tags_archives( $wp_query ) {
+
+      if ( $wp_query->get( 'tag' ) )
+        $wp_query->set( 'post_type', 'any' );
+
+      /* I just leave this here if I need to debug stuff */
+      //ptcfp_print_r( $wp_query );
+
+    }
+
     /**
      * Includes the categories in archive pages
      *
