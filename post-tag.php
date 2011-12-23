@@ -70,6 +70,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     function ptcfp_category_archives($wp_query) {
         if ( $wp_query->get('category_name') )
             $wp_query->set('post_type', 'any');
+    /**
+     * Want to make sure that these query modifications don't
+     * show on the admin side or we're going to get pages and
+     * posts mixed in together when we click on a term
+     * in the admin
+     *
+     * @since 1.0
+     */
     }
     add_action('pre_get_posts', 'ptcfp_category_archives');
 
