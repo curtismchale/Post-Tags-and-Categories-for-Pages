@@ -39,7 +39,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      */
     function ptcfp_tags_archives( $wp_query ) {
 
-      if ( $wp_query->get( 'tag' ) )
+      if ( ! empty( $wp_query->get( 'tag' ) ) )
         $wp_query->set( 'post_type', 'any' );
 
       /* I just leave this here if I need to debug stuff */
@@ -58,7 +58,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      */
     function ptcfp_category_archives( $wp_query ) {
 
-      if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
+      if ( ! empty( $wp_query->get( 'category_name' ) ) || ! empty( $wp_query->get( 'cat' ) ) )
         $wp_query->set( 'post_type', 'any' );
 
       /* I just leave this here if I need to debug stuff */
@@ -93,4 +93,3 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
        echo "</pre>";
 
     }
-?>
