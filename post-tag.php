@@ -13,6 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /**
  *  TODO add categories to the end of pages
  *  TODO add the tags to the end of pages
+ * @todo make this a Class based plugin
  */
 
     /**
@@ -39,7 +40,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      */
     function ptcfp_tags_archives( $wp_query ) {
 
-      if ( ! empty( $wp_query->get( 'tag' ) ) )
+      if( $wp_query->get( 'tag' ) )
         $wp_query->set( 'post_type', 'any' );
 
       /* I just leave this here if I need to debug stuff */
@@ -58,7 +59,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      */
     function ptcfp_category_archives( $wp_query ) {
 
-      if ( ! empty( $wp_query->get( 'category_name' ) ) || ! empty( $wp_query->get( 'cat' ) ) )
+      if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
         $wp_query->set( 'post_type', 'any' );
 
       /* I just leave this here if I need to debug stuff */
