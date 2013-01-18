@@ -84,18 +84,3 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  } // PTCFP
 
  $ptcfp = new PTCFP();
-
-    /**
-     * Produces print_r inside <pre>
-     *
-     * @param string $data The variable we want to print
-     *
-     * @since 1.0
-     */
-    function ptcfp_print_r( $data ) {
-
-       echo "<pre>";
-          print_r($data);
-       echo "</pre>";
-
-    }
