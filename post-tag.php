@@ -31,50 +31,50 @@ class PTCFP{
 
   } // __construct
 
-    /**
-     * Registers the taxonomy terms for the post type
-     *
-     * @since 1.0
-     *
-     * @uses register_taxonomy_for_object_type
-     */
-    function taxonomies_for_pages() {
-        register_taxonomy_for_object_type( 'post_tag', 'page' );
-        register_taxonomy_for_object_type( 'category', 'page' );
-    } // taxonomies_for_pages
+  /**
+   * Registers the taxonomy terms for the post type
+   *
+   * @since 1.0
+   *
+   * @uses register_taxonomy_for_object_type
+   */
+  function taxonomies_for_pages() {
+      register_taxonomy_for_object_type( 'post_tag', 'page' );
+      register_taxonomy_for_object_type( 'category', 'page' );
+  } // taxonomies_for_pages
 
-    /**
-     * Includes the tags in archive pages
-     *
-     * Modifies the query object to include pages
-     * as well as posts in the items to be returned
-     * on archive pages
-     *
-     * @since 1.0
-     */
-    function tags_archives( $wp_query ) {
+  /**
+   * Includes the tags in archive pages
+   *
+   * Modifies the query object to include pages
+   * as well as posts in the items to be returned
+   * on archive pages
+   *
+   * @since 1.0
+   */
+  function tags_archives( $wp_query ) {
 
-      if( $wp_query->get( 'tag' ) )
-        $wp_query->set( 'post_type', 'any' );
+    if ( $wp_query->get( 'tag' ) )
+      $wp_query->set( 'post_type', 'any' );
 
-    } // tags_archives
+  } // tags_archives
 
-    /**
-     * Includes the categories in archive pages
-     *
-     * Modifies the query object to include pages
-     * as well as posts in the items to be returned
-     * on archive pages
-     *
-     * @since 1.0
-     */
-    function category_archives( $wp_query ) {
+  /**
+   * Includes the categories in archive pages
+   *
+   * Modifies the query object to include pages
+   * as well as posts in the items to be returned
+   * on archive pages
+   *
+   * @since 1.0
+   */
+  function category_archives( $wp_query ) {
 
-      if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
-        $wp_query->set( 'post_type', 'any' );
+    if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
+      $wp_query->set( 'post_type', 'any' );
 
-    } // category_archives
+  } // category_archives
 
- } // PTCFP
+} // PTCFP
 
- $ptcfp = new PTCFP();
+$ptcfp = new PTCFP();
