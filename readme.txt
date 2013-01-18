@@ -3,8 +3,8 @@
 Contributors: Curtis McHale
 Tags: wp, tags, categories, pages
 Requires at least: 3.0
-Tested up to: 3.3
-Stable tag: 1.0
+Tested up to: 3.5
+Stable tag: 1.1
 
 Adds the built in WordPress categories and tags to your pages.
 
