@@ -13,7 +13,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /**
  *  TODO add categories to the end of pages
  *  TODO add the tags to the end of pages
- * @todo make this a Class based plugin
  */
 
  class PTCFP{
