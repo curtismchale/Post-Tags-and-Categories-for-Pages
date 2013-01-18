@@ -16,6 +16,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * @todo make this a Class based plugin
  */
 
+ class PTCFP{
+
+  function __construct(){
+
+    add_action( 'init', array( $this, 'taxonomies_for_pages' ) );
+
+  } // __construct
+
     /**
      * Registers the taxonomy terms for the post type
      *
@@ -23,11 +31,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
      *
      * @uses register_taxonomy_for_object_type
      */
-    function ptcfp_taxonomies_for_pages() {
+    function taxonomies_for_pages() {
         register_taxonomy_for_object_type( 'post_tag', 'page' );
         register_taxonomy_for_object_type( 'category', 'page' );
-    }
-    add_action( 'init', 'ptcfp_taxonomies_for_pages' );
+    } // taxonomies_for_pages
+
+ } // PTCFP
+
+ $ptcfp = new PTCFP();
+
 
     /**
      * Includes the tags in archive pages
