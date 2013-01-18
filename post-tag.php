@@ -10,12 +10,7 @@ License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-/**
- *  TODO add categories to the end of pages
- *  TODO add the tags to the end of pages
- */
-
- class PTCFP{
+class PTCFP{
 
   function __construct(){
 
