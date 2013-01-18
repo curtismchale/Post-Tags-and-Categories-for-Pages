@@ -23,6 +23,12 @@ folder.
 
 == Changelog ==
 
+= 1.1 =
+
+- made it a class based plugin
+- cleaned up TODO notes that I have no reference for now
+- brought it in to line better with WordPress coding standards
+
 = 1.0 =
 
 - relesed on WordPress repository
