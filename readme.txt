@@ -28,6 +28,10 @@ folder.
 
 == Changelog ==
 
+= 1.3 =
+
+- making the README more clear for end users
+
 = 1.1 =
 
 - made it a class based plugin
