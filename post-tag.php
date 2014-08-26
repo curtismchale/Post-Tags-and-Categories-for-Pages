@@ -54,7 +54,7 @@ class PTCFP{
    */
   function tags_archives( $wp_query ) {
 
-    if ( $wp_query->get( 'tag' ) )
+    if ( ( is_archive() || is_search() ) && $wp_query->get( 'tag' ) )
       $wp_query->set( 'post_type', 'any' );
 
   } // tags_archives
@@ -70,7 +70,7 @@ class PTCFP{
    */
   function category_archives( $wp_query ) {
 
-    if ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) )
+    if ( ( is_archive() || is_search() ) && ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) ) )
       $wp_query->set( 'post_type', 'any' );
 
   } // category_archives
