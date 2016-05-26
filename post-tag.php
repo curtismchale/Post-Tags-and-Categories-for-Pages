@@ -44,11 +44,11 @@ class PTCFP{
   } // taxonomies_for_pages
 
   /**
-   * Includes the tags in archive pages
+   * Includes the tags in archive and search pages
    *
    * Modifies the query object to include pages
    * as well as posts in the items to be returned
-   * on archive pages
+   * on archive and search pages
    *
    * @since 1.0
    */
@@ -60,11 +60,11 @@ class PTCFP{
   } // tags_archives
 
   /**
-   * Includes the categories in archive pages
+   * Includes the categories in archive and search pages
    *
    * Modifies the query object to include pages
    * as well as posts in the items to be returned
-   * on archive pages
+   * on archive and search pages
    *
    * @since 1.0
    */
