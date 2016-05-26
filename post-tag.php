@@ -48,13 +48,14 @@ class PTCFP{
    *
    * Modifies the query object to include pages
    * as well as posts in the items to be returned
-   * on archive and search pages
+   * on archive and search pages, but only if
+   * post_type is not set by another plugin/filter
    *
    * @since 1.0
    */
   function tags_archives( $wp_query ) {
 
-    if ( ( is_archive() || is_search() ) && $wp_query->get( 'tag' ) )
+    if ( ( ( is_archive() || is_search() ) && $wp_query->get( 'tag' ) ) && ( ! $wp_query->get( 'post_type' ) ) )
       $wp_query->set( 'post_type', 'any' );
 
   } // tags_archives
@@ -64,13 +65,14 @@ class PTCFP{
    *
    * Modifies the query object to include pages
    * as well as posts in the items to be returned
-   * on archive and search pages
+   * on archive pages, but only if
+   * post_type is not set by another plugin/filter
    *
    * @since 1.0
    */
   function category_archives( $wp_query ) {
 
-    if ( ( is_archive() || is_search() ) && ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) ) )
+    if ( ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) ) && ( ! $wp_query->get( 'post_type' ) ) )
       $wp_query->set( 'post_type', 'any' );
 
   } // category_archives
