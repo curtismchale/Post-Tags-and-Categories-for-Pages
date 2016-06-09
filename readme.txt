@@ -30,7 +30,7 @@ folder.
 
 = 1.4 =
 
-- prevented it from setting `post_type` on archive/search pages and if `post_type` was already set
+- prevented it from setting `post_type` on archive/search pages and if `post_type` was already set thanks macbookandrew
 
 = 1.3 =
 
