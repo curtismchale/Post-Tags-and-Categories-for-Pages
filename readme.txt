@@ -3,8 +3,8 @@
 Contributors: Curtis McHale
 Tags: wp, tags, categories, pages
 Requires at least: 3.0
-Tested up to: 3.9
-Stable tag: 1.3
+Tested up to: 4.5.2
+Stable tag: 1.4
 
 Adds the built in WordPress categories and tags to your pages.
 
@@ -28,6 +28,10 @@ folder.
 
 == Changelog ==
 
+= 1.4 =
+
+- prevented it from setting `post_type` on archive/search pages and if `post_type` was already set
+
 = 1.3 =
 
 - making the README more clear for end users
@@ -40,4 +44,4 @@ folder.
 
 = 1.0 =
 
-- relesed on WordPress repository
+- released on WordPress repository

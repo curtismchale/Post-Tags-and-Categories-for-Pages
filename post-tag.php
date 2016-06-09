@@ -3,7 +3,7 @@
 Plugin Name: Post Tags and Categories for Pages
 Plugin URI: http://wpthemetutorial.com/plugins/post-tags-and-categories-for-pages/
 Description: Simply adds the stock Categories and Post Tags to your Pages.
-Version: 1.3
+Version: 1.4
 Author: curtismchale
 Author URI: http://wpthemetutotial.com/about/
 License: GNU General Public License v2.0
@@ -44,33 +44,35 @@ class PTCFP{
   } // taxonomies_for_pages
 
   /**
-   * Includes the tags in archive pages
+   * Includes the tags in archive and search pages
    *
    * Modifies the query object to include pages
    * as well as posts in the items to be returned
-   * on archive pages
+   * on archive and search pages, but only if
+   * post_type is not set by another plugin/filter
    *
    * @since 1.0
    */
   function tags_archives( $wp_query ) {
 
-    if ( ( is_archive() || is_search() ) && $wp_query->get( 'tag' ) )
+    if ( ( ( is_archive() || is_search() ) && $wp_query->get( 'tag' ) ) && ( ! $wp_query->get( 'post_type' ) ) )
       $wp_query->set( 'post_type', 'any' );
 
   } // tags_archives
 
   /**
-   * Includes the categories in archive pages
+   * Includes the categories in archive and search pages
    *
    * Modifies the query object to include pages
    * as well as posts in the items to be returned
-   * on archive pages
+   * on archive pages, but only if
+   * post_type is not set by another plugin/filter
    *
    * @since 1.0
    */
   function category_archives( $wp_query ) {
 
-    if ( ( is_archive() || is_search() ) && ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) ) )
+    if ( ( $wp_query->get( 'category_name' ) || $wp_query->get( 'cat' ) ) && ( ! $wp_query->get( 'post_type' ) ) )
       $wp_query->set( 'post_type', 'any' );
 
   } // category_archives
