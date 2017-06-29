@@ -3,7 +3,7 @@
 Plugin Name: Post Tags and Categories for Pages
 Plugin URI: http://wpthemetutorial.com/plugins/post-tags-and-categories-for-pages/
 Description: Simply adds the stock Categories and Post Tags to your Pages.
-Version: 1.4
+Version: 1.4.1
 Author: curtismchale
 Author URI: http://wpthemetutotial.com/about/
 License: GNU General Public License v2.0
